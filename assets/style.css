@@ -1,0 +1,248 @@
+*{
+    box-sizing: border-box;
+    margin: 0em;
+    padding: 0em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+
+body{
+    margin: auto;
+    position: center;
+}
+
+.conteiner{
+    margin: 0 10em;
+}
+
+.whats {
+    display: flex;
+}
+.whats a{
+    background-image: url('../assets/imgs/Retângulo\ Arredondado\ 2.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+
+/* SEÇÃO HEADER */
+
+header{
+    
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex: 1 1 1 0.5em;
+    
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    min-width: min-content;
+}
+
+header ul a{
+    margin-left: 1em ;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+    padding: .5em;
+    position: relative;
+
+}
+ 
+header ul a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    background-color: black;
+    box-sizing: border-box;
+    left: 0;
+    bottom: 0;
+    transition: 0.3s ease-in-out  ;
+    
+}
+
+header ul a:hover::after{
+    color: #612c83;
+    width: 100%;
+    
+}
+
+/* SEÇÃO HEADER */
+
+/* SEÇÃO BANNER */
+
+.banner{
+    background-image:url("./imgs/banner.jpg");
+    
+}
+
+.banner h1 {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.banner p {
+    box-sizing: content-box;
+    font-size: 24px;
+    line-height: 35px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #509aaf71;
+}
+/* SEÇÃO BANNER */
+
+/* SEÇÃO PARAGRAFOS */
+main {
+    text-align: center;
+}
+main h1 {
+    line-height: 35px;
+    text-transform: uppercase;
+    color: #612c83;
+    font-weight: 700;
+    text-align: center;
+    margin: 3em 0em 1em 0em;
+}
+
+
+/* BULLET POINTS */
+.bullet{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5em 0em;
+
+}
+
+.bullet ul{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+   
+}
+
+.bullet ul li {
+    width: 8em;
+    min-width: 5em;
+    flex-wrap: wrap;
+    margin: 0em 1em;
+}
+
+
+/* SEÇÃO PARAGRAFOS */
+
+/* SEÇÃO COBERTURA NACIONAL */
+
+.coberturanacional {
+    background-image: url('./imgs/GettyImages-803752422.jpg');
+    color: white;
+    padding: .3em 0em;
+}
+
+.coberturanacional h1 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+
+}
+
+.coberturanacional h2 {
+    
+    line-height: 25px;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+
+/* SEÇÃO COBERTURA NACIONAL */
+
+/* SEÇÃO CONTATO */
+
+.contato{
+    background-color: #363636;
+    color: white;
+}
+
+.contato h1 {
+    text-transform: uppercase;
+    color: white;
+}
+.formetexto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+    
+}
+
+.paragrafocontato{
+    text-align: left;
+    margin: 0em;
+    padding: 0em;
+    max-width: 50%;
+    min-width: 15em;
+}
+
+.formetexto h2 {
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2em 0em;
+}
+
+.formetexto p {
+    margin: 2em 0em;
+}
+
+.pontualidadeeseg{
+    display: flex;
+    gap: 1em;
+}
+
+.formetexto form {
+    
+    display: flex;
+    flex-direction: column;
+    min-width: 10em;
+    height: 20em;
+    width: 24em;
+    color: black;
+    background-color: white;
+    
+}
+
+form p{
+    font-weight: bold;
+    text-transform: uppercase;
+} 
+
+form input, textarea{
+    margin: .5em 1em;
+    border-radius: .3em;
+    padding: .5em;
+    border-color: #612c83;
+}
+
+form button {
+    margin: .5em 1em;
+    padding: .5em;
+    border-radius: .3em;
+    border-color: #61aec3;
+    background-color: #509aaf;
+}
+
+form button:hover {
+    background-color: #63b2c8;
+    cursor: pointer;
+}
+
+/* SEÇÃO CONTATO */
