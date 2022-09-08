@@ -10,10 +10,10 @@ body{
     margin: auto;
     position: center;
 }
-
-.conteiner{
+body > h1, h2, p {
     margin: 0 10em;
 }
+
 
 .whats {
     display: flex;
@@ -33,7 +33,10 @@ header{
     align-items: baseline;
     justify-content: space-between;
     flex: 1 1 1 0.5em;
-    
+    width: 100%;
+    background-color: yellow;
+    padding: .5em 10em;
+    /* position: fixed; */
 }
 
 header ul {
@@ -79,19 +82,29 @@ header ul a:hover::after{
 
 .banner{
     background-image:url("./imgs/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 25em;
     
 }
 
+
 .banner h1 {
+    padding-top: 2em;
+    margin: 0 6.5em;
+    font-size: 1.5em;
     text-transform: uppercase;
     color: #ffffff;
     font-weight: 700;
 }
 
 .banner p {
+    max-width: max-content;
+    margin: 2em 25em 0em 5.5em;
+    padding: 0em 1em   ;
     box-sizing: content-box;
-    font-size: 24px;
-    line-height: 35px;
+    font-size: 1.5em;
     color: #ffffff;
     font-weight: 400;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -104,21 +117,39 @@ main {
     text-align: center;
 }
 main h1 {
-    line-height: 35px;
     text-transform: uppercase;
     color: #612c83;
-    font-weight: 700;
     text-align: center;
+}
+
+.sobre h1, h2{
     margin: 3em 0em 1em 0em;
+}
+
+.p2{
+    margin: 3em 10em 1em 10em;
+}
+
+.sobre h2{
+    margin: 2em 0em;
+}
+
+.servicos{
+    margin-left: 13em ;
+    margin-right: 13em;
 }
 
 
 /* BULLET POINTS */
+.bullet img{
+    width: 7em;
+}
+
 .bullet{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 5em 0em;
+    margin: 3em 0em;
 
 }
 
@@ -126,16 +157,27 @@ main h1 {
     display: flex;
     list-style: none;
     flex-wrap: wrap;
-   
+
 }
 
 .bullet ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 1;
+    grid-row: 2;
     width: 8em;
-    min-width: 5em;
-    flex-wrap: wrap;
+    min-width: 10em;
     margin: 0em 1em;
+
+    
 }
 
+.bullet ul li p {
+    font-size: .9em;
+    padding: 1em ;
+    
+}
 
 /* SEÇÃO PARAGRAFOS */
 
@@ -144,10 +186,12 @@ main h1 {
 .coberturanacional {
     background-image: url('./imgs/GettyImages-803752422.jpg');
     color: white;
-    padding: .3em 0em;
+    min-height: 30em;
+    padding: 3em 0em;
 }
 
 .coberturanacional h1 {
+    padding: 1em 0em;
     color: white;
     text-transform: uppercase;
     font-weight: 700;
@@ -156,7 +200,6 @@ main h1 {
 
 .coberturanacional h2 {
     
-    line-height: 25px;
     text-transform: uppercase;
     font-size: 1em;
 }
@@ -166,6 +209,7 @@ main h1 {
 /* SEÇÃO CONTATO */
 
 .contato{
+    padding: 3em 10em;
     background-color: #363636;
     color: white;
 }
@@ -179,16 +223,12 @@ main h1 {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 2em;
     
 }
 
 .paragrafocontato{
     text-align: left;
-    margin: 0em;
-    padding: 0em;
-    max-width: 50%;
-    min-width: 15em;
+    max-width: 40%;
 }
 
 .formetexto h2 {
@@ -200,34 +240,48 @@ main h1 {
 }
 
 .formetexto p {
-    margin: 2em 0em;
+    margin: 1em 0em;
 }
 
 .pontualidadeeseg{
     display: flex;
     gap: 1em;
+    align-items: flex-start;
 }
 
 .formetexto form {
     
     display: flex;
     flex-direction: column;
-    min-width: 10em;
+    max-width: 60%;
+    width: 25em;
     height: 20em;
-    width: 24em;
     color: black;
     background-color: white;
     
 }
+form img{
+    width: 1em;
+    position: relative;
+}
 
+.form div{
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    font-size: medium;
+    outline: none;
+
+}
 form p{
     font-weight: bold;
     text-transform: uppercase;
 } 
 
 form input, textarea{
+    
     margin: .5em 1em;
-    border-radius: .3em;
+    border-radius: .5em;
     padding: .5em;
     border-color: #612c83;
 }
@@ -238,6 +292,8 @@ form button {
     border-radius: .3em;
     border-color: #61aec3;
     background-color: #509aaf;
+    color: white;
+    font-weight: bold;
 }
 
 form button:hover {
@@ -245,4 +301,4 @@ form button:hover {
     cursor: pointer;
 }
 
-/* SEÇÃO CONTATO */
+/* SEÇÃO 
