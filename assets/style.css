@@ -9,21 +9,37 @@
 body{
     margin: auto;
     position: center;
+    
 }
 body > h1, h2, p {
     margin: 0 10em;
+    font-size: max(1em, 1vw);
 }
 
-
+/* CARD WHATSAPP */
 .whats {
     display: flex;
-}
-.whats a{
+    align-items: center;
+    justify-content: space-around;
+    gap: 1.5em;
+    padding: .5em 1em ;
+
     background-image: url('../assets/imgs/Retângulo\ Arredondado\ 2.jpg');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
+    
+    position: relative;
+    left: 32em;
+    bottom: 4em;
 }
-
+.whats a{
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: white;
+    text-decoration: none;
+    font-size: .8em;
+}
+/* CARD WHATSAPP */
 
 /* SEÇÃO HEADER */
 
@@ -32,11 +48,57 @@ header{
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-    flex: 1 1 1 0.5em;
     width: 100%;
-    background-color: yellow;
     padding: .5em 10em;
-    /* position: fixed; */
+    position: fixed;
+    top: 0em;
+    background-color: white;
+    
+}
+
+/* NAV */
+.mobile{
+    cursor: pointer;
+    display: none;
+}
+.mobile div{
+    width: 32px;
+    height: 2px;
+    margin: 8px;
+    background-color: black;
+}
+
+@media (max-width: 999px) {
+
+    body{
+        overflow-x: hidden;
+    }
+
+    header ul {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vh;
+        height: 92vh;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+    }
+
+    header ul .active{
+        transform: translateX(0);
+    }
+
+    header ul li {
+        margin-left: 0;
+        opacity: 0;
+    }
+
+    .mobile {
+        display: block;
+    }
 }
 
 header ul {
@@ -75,18 +137,20 @@ header ul a:hover::after{
     width: 100%;
     
 }
+/* NAV */
 
 /* SEÇÃO HEADER */
 
 /* SEÇÃO BANNER */
 
 .banner{
+    
     background-image:url("./imgs/banner.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     min-height: 25em;
-    
+    margin-top: 6em;
 }
 
 
@@ -250,11 +314,8 @@ main h1 {
 }
 
 .formetexto form {
-    
-    display: flex;
-    flex-direction: column;
-    max-width: 60%;
-    width: 25em;
+    min-width: 20em;
+    width: 30em;
     height: 20em;
     color: black;
     background-color: white;
@@ -263,14 +324,13 @@ main h1 {
 form img{
     width: 1em;
     position: relative;
+    left: 3em;
 }
 
-.form div{
+.form {
     display: flex;
-    align-items: center;
-    background-color: transparent;
-    font-size: medium;
-    outline: none;
+    flex-direction: column;
+   width: 100%;
 
 }
 form p{
@@ -279,7 +339,10 @@ form p{
 } 
 
 form input, textarea{
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: .5em 1em;
     border-radius: .5em;
     padding: .5em;
